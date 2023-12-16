@@ -1,0 +1,15 @@
+<div>
+    <h3>Create new student</h3>
+    <div [formGroup]="studentForm" >
+        <input type="text" formControlName="firstName" > <br>
+        <input type="text" formControlName="lastName" > <br>
+        <input type="submit" value="Submit" (click)="submit()" >
+    </div>
+
+    <br>
+    <div *ngIf="formData" >
+        <p style="border: 2px solid black; min-height: 50px;">
+            Name : {{formData.firstName}} {{formData.lastName}}
+        </p>
+    </div>
+</div>
